@@ -6,14 +6,14 @@ function runKs(startingDirectory)
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Starting directory: directory to start finding files.
     if nargin < 1 || exist(startingDirectory, 'dir')~=7
-        startingDirectory = 'E:\';
+        startingDirectory = 'H:\';
     end
     
     % Working directory: directory for saving temporary data. Choose fast drive like SSD.
-    workingDirectory = 'E:\temp'; 
+    workingDirectory = 'H:\temp'; 
     
     % Kilosort location
-    kilosortDirectory = 'C:\Users\kimd11\OneDrive - Howard Hughes Medical Institute\src\Kilosort2';
+    kilosortDirectory = 'C:\Users\labadmin\Documents\GitHub\Kilosort2';
     
     % Redo policy: choose whether do clustering if output file alreay exists, {'yes', 'no', 'ask'}
     recluster = 'no';
@@ -131,7 +131,7 @@ function runKs(startingDirectory)
             close all;
         end
     end
-    slack('runKs done');
+    %slack('runKs done');
 end
 
 function ops = setOps(ops, fileName, excludedChannel)
@@ -148,7 +148,7 @@ function ops = setOps(ops, fileName, excludedChannel)
     if nChannel == 384
         ops.NchanTOT = 385;
     elseif nChannel == 64
-        ops.NchanTOT = 96;
+        ops.NchanTOT = 128;
     end
     
     ops.fbinary = fileName;
