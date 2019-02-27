@@ -100,7 +100,7 @@ function runKs(startingDirectory)
                 rez = learnAndSolve8b(rez);
 
                 disp(['==== ', datestr(datetime, 'yyyy/mm/dd HH:MM:ss'), ', spilt']);
-                rez = splitAllClusters(rez);
+                rez = splitAllClusters(rez, true);
 
                 disp(['==== ', datestr(datetime, 'yyyy/mm/dd HH:MM:ss'), ', saving data to ', fname]);
                 save(fname, 'rez', '-v7.3');

@@ -26,7 +26,7 @@ function runJrc(startingDirectory)
     disp('***************************************');
 
     %% 1. Choose files to sort
-    [fileList, excludedChannel] = fileSelector(startingDirectory, checkSubDir, '*ap.bin'); % for now just select imec.ap.bin files for JRC
+    [fileList, excludedChannel] = fileSelector(startingDirectory, checkSubDir, '*ap.bin');
     if isempty(fileList); return; end
     addpath(jrcDirectory);
     
